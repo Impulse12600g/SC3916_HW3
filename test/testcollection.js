@@ -23,7 +23,7 @@ describe('Register, Login and Call Test Collection with Basic Auth and JWT Auth'
 
     after((done) => { //after this test suite empty the database
         //db.userList = [];
-        User.deleteOne({ name: 'test'}, function(err, user) {
+        User.deleteOne({ name: 'test'}, function(err, user) {// clear out when done
             if (err) throw err;
         });
         done();
